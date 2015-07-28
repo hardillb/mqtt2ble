@@ -1,3 +1,4 @@
+var util = require('util');
 var bleno = require('bleno');
 
 function TopicCharacteristic(config, client) {
