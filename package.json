@@ -1,0 +1,19 @@
+{
+  "name": "mqtt2ble",
+  "version": "0.0.0",
+  "description": "Bridge a MQTT topic to BLE Gatt Service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "BLE",
+    "MQTT"
+  ],
+  "author": "b.hardill@gmail.com",
+  "license": "APACHE-2.0",
+  "dependencies": {
+    "bleno": "~0.1.14",
+    "mqtt": "~1.3.5"
+  }
+}
