@@ -31,7 +31,9 @@ TopicCharacteristic.prototype.onWriteRequest = function(data, offset, withoutRes
 
 
 TopicCharacteristic.prototype.onReadRequest = function(offset, callback) {
-	callback(this.RESULT_SCCESS, this._value);
+	console.log("READING: " + this._value.toString());
+	console.log("OFFSET: " + offset);
+	callback(this.RESULT_SUCCESS, this._value);
 }
 
 TopicCharacteristic.prototype.onSubscribe = function(maxValueSize, updateValueCallback) {
@@ -44,6 +46,7 @@ TopicCharacteristic.prototype.onUnsubscribe = function () {
 
 TopicCharacteristic.prototype.update = function(value) {
 	this._value = value;
+	console.log(this._value.toString());
 	if (this._updateValueCallback) {
 		this._updateValueCallback(this._value);
 	}

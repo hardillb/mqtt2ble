@@ -17,7 +17,8 @@ client.on('connect', function(){
 });
 
 client.on('message',function(topic, message){
-  topicCharacteristic.update(message.payload);
+	console.log(message.toString());
+  topicCharacteristic.update(message);
 });
 
 bleno.on('stateChange', function(state){
