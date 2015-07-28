@@ -3,7 +3,7 @@ var bleno = require('bleno');
 function TopicCharacteristic(config, client) {
 	bleno.Characteristic.call(this, {
 		uuid: '6bcb06e2747542a9a62a54a1f3ce11e6',
-		properties: 'read', 'write', 'notify'],
+		properties: ['read', 'write', 'notify'],
 		descriptors: [
 			new bleno.Descriptor({
 				uuid: '2901',
