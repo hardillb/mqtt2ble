@@ -10,14 +10,14 @@ var config = require("./config");
 
 var client = mqtt.connect(config.broker);
 
-var topic = new TopicCharacteristic(config);
+var topicCharacteristic = new TopicCharacteristic(config);
 
 client.on('connect', function(){
   client.subscribe(config.topic);
 });
 
 client.on('message',function(topic, message){
-  topic.update(message.payload);
+  topicCharacteristic.update(message.payload);
 });
 
 bleno.on('stateChange', function(state){
@@ -34,7 +34,7 @@ bleno.on('advertisingStart', function(error){
   	  new BlenoPrimarySerivce({
   	  	uuid: 'ba42561bb1d2440a8d040cefb43faece',
   	  	characteristics: [
-  	  	  topic
+  	  	  topicCharacteristic
   	  	]
   	  })
   	]);
