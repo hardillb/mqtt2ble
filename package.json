@@ -15,5 +15,8 @@
   "dependencies": {
     "bleno": "~0.1.14",
     "mqtt": "~1.3.5"
+  },
+  "bin": {
+    "mqtt2ble": "index.js"
   }
 }
