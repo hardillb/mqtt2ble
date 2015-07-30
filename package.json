@@ -10,7 +10,13 @@
     "BLE",
     "MQTT"
   ],
-  "author": "b.hardill@gmail.com",
+  "contributors": [
+      {
+          "name": "Benjamin Hardill",
+          "email": "hardillb@gmail.com",
+          "url": "http://www.hardill.me.uk/wordpress/"
+      }
+    ],
   "license": "APACHE-2.0",
   "dependencies": {
     "bleno": "~0.1.14",
