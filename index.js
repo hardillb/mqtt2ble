@@ -1,12 +1,33 @@
 var util = require('util');
 var bleno = require('bleno');
+var path = require('path');
 var mqtt = require('mqtt');
 
 var BlenoPrimarySerivce = bleno.PrimaryService;
 
 var TopicCharacteristic = require('./topicCharacteristic');
 
-var config = require("./config");
+var config;
+var cwd = process.cwd();
+
+var args = process.argv;
+
+if (args) {
+  if (args[0] == '-c') {
+    if (args[1].indexOf('/') === 0) {
+      config = require(args[1]);
+    } else {
+      config = require(path.join(cwd, args[1]));
+    }
+  } else {
+    config = require(path.join(cwd, 'config.js'));
+  }
+}
+
+if (!config) {
+  console.log("Must provide a config.js");
+  process.exit();
+}
 
 var client = mqtt.connect(config.broker);
 
