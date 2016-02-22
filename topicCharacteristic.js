@@ -24,7 +24,7 @@ util.inherits(TopicCharacteristic, bleno.Characteristic);
 TopicCharacteristic.prototype.onWriteRequest = function(data, offset, withoutResponse, callback) {
 	this._value = data;
 
-	client.publish(this._topic, data);
+	this._client.publish(this._topic, data);
 
 	callback(this.RESULT_SUCCESS);
 }
