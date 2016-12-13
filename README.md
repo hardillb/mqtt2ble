@@ -22,6 +22,15 @@ and the topic charactristic is
 
    6bcb06e2747542a9a62a54a1f3ce11e6
 
+Background
+-----------
+
+There is a blog post that describes how I built this code here:
+http://www.hardill.me.uk/wordpress/2015/07/28/building-bluetooth-le-devices/
+
+And another post about building a simple Android App to work with it here:
+http://www.hardill.me.uk/wordpress/2015/08/11/mqtt2ble-android-test-app/
+
 
 Known issues
 -------------
